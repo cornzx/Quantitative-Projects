@@ -25,6 +25,5 @@ Some new ideas:
 References:
 <nav>
 <a href=https://en.algorithmica.org/hpc/pipelining/branchless>Branchless Programming</a> <br>
-<a href=https://www.statology.org/central-limit-theorem>Central Limit Theorem</a> |
 <a href=https://cp-algorithms.com/navigation.html>List of Algorithms</a> |
 </nav> 
