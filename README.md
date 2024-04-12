@@ -1,5 +1,5 @@
-# Quantitative Project
-These are the projects I have done to learn programming skills.
+# Quantitative Projects
+These are the projects I have done to learn programming skills to model or analyse problems.\
 The languages used may vary from Python to C to C++
 
 
