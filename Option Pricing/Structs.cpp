@@ -82,7 +82,7 @@ double bonds(struct Bonds bonds);
 
 
 // vary the final stock price to get the range of positive profits
-double option_payoffs(struct Options option) //https://en.algorithmica.org/hpc/pipelining/branchless/
+double option_payoffs(struct Options option)
 {
     double payoff = (2*option.long_short - 1)*fmax((2*option.call_put - 1)*option.stock_price - (2*option.call_put - 1)*option.strike_price,0);
     double profit = (2*option.long_short - 1)*fmax((2*option.call_put - 1)*option.stock_price - (2*option.call_put - 1)*option.strike_price,0) - (2*option.long_short - 1)*option.option_price;
@@ -110,12 +110,12 @@ double bonds(struct Bonds bonds)
     bonds.maturity;
     bonds.yield_to_maturity;
 
-    //calculate present value to see if its overpriced
-    double yield_to_maturity = formula;
-    double present_value = formula;
-    double forward_rate = formula;
+    //calculate present value to see if there is arbitrage opportunities
+    // double yield_to_maturity = formula;
+    // double present_value = formula;
+    // double forward_rate = formula;
 
-    bonds(0,0,100,0.5,?)
+    // bonds(0,0,100,0.5,0)
 
 }
 
