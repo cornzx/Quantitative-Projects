@@ -105,7 +105,7 @@ double option_payoffs(struct Options option)
 //option_combinations (option, option2, option3)
 double option_combinations(struct Options option,struct Options option2,struct Options option3)
 {
-    printf("The option combination gives $ %.*f profit.\n",Format,(option_payoffs(option) + option_payoffs(option2) + option_payoffs(option3)));
+    printf("The option combination gives $%.*f profit.\n",Format,(option_payoffs(option) + option_payoffs(option2) + option_payoffs(option3)));
     return (option_payoffs(option) + option_payoffs(option2) + option_payoffs(option3));
 }
 
@@ -147,7 +147,8 @@ double bonds_yield_to_maturity(struct Bonds bonds)
 
 // bonds_arbitrage (bonds)
 double bonds_arbitrage(struct Bonds bonds)
-{
+{   
+    printf("There is arbitrage profit of $%.*f when you borrowed money to buy the bond\n",Format, bonds.price - bonds_present_value(bonds) );
     return bonds.price - bonds_present_value(bonds);
 }
 
@@ -155,7 +156,6 @@ double swaps_present_value(struct Swaps swaps)
 {
     return 0;
 }
-
 
 /***************************************************************************************************************************************/
 
@@ -173,8 +173,6 @@ int main()
 
     Bonds bonds100 = {100,110,0.05,4,2};
     bonds_arbitrage(bonds100);
-
-    Swaps swap100 = {};
 
     clock_t end = clock();
     double time_spent = (double)(end - begin) / CLOCKS_PER_SEC;
